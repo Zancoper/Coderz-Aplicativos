@@ -10,7 +10,8 @@ const courses = [
     rating: 4.9,
     students: "60",
     duration: "10h",
-    price: "R$ 397,90"
+    price: "R$ 397,90",
+    link: "https://pay.kiwify.com.br/yvO5E6C"
   },
   {
     image: "https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/comunidade-coderz-app-znoa2v/assets/d9k117g1ojmr/ChatGPT_Image_3_de_jan._de_2026%2C_18_08_27.png",
@@ -19,7 +20,8 @@ const courses = [
     rating: 5.0,
     students: "80",
     duration: "20h",
-    price: "R$ 189,90"
+    price: "R$ 189,90",
+    link: "https://pay.kiwify.com.br/6mPMdZ7"
   },
   {
     image: "https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/comunidade-coderz-app-znoa2v/assets/rh5iigu4rq66/baixados_(1).png",
@@ -28,7 +30,8 @@ const courses = [
     rating: 4.8,
     students: "1600",
     duration: "15h",
-    price: "R$ 99,90"
+    price: "R$ 99,90",
+    link: "https://pay.kiwify.com.br/iqK9knh"
   }
 ];
 
@@ -72,7 +75,7 @@ const Courses: React.FC = () => {
             <div className="flex items-center justify-between">
               <span className="text-2xl font-black text-white">{course.price}</span>
               <a 
-                href="https://comunidade.coderzaplicativos.com.br"
+                href={course.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-3 rounded-xl bg-purple-600/20 text-purple-400 font-bold hover:bg-purple-600 hover:text-white transition-all text-center"

@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
               <ChevronRight size={16} className="text-gray-600 group-hover:text-white transition-colors" />
             </a>
 
-            {/* Info Card - Now moved here next to the access link */}
+            {/* Info Card */}
             <div className="glass p-4 rounded-2xl animate-bounce-slow shadow-2xl border-white/10 flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-pink-500 flex items-center justify-center text-white shrink-0">
                     <GraduationCap size={20} />
@@ -94,10 +94,11 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="flex-1 relative flex justify-center lg:justify-end">
-          <div className="relative z-10 w-full max-w-[340px]">
-            {/* Mockup visual with Vertical Carousel - Aspect ratio updated for modern phones */}
-            <div className="relative glass p-3 rounded-[50px] shadow-2xl border-white/20">
-                <div className="relative overflow-hidden rounded-[40px] aspect-[9/19.5] bg-[#0a0515]">
+          {/* Responsive carousel width: 260px on mobile, 340px on tablets/desktops */}
+          <div className="relative z-10 w-full max-w-[260px] sm:max-w-[340px]">
+            {/* Mockup visual with Vertical Carousel */}
+            <div className="relative glass p-2 sm:p-3 rounded-[40px] sm:rounded-[50px] shadow-2xl border-white/20">
+                <div className="relative overflow-hidden rounded-[30px] sm:rounded-[40px] aspect-[9/19.5] bg-[#0a0515]">
                     {carouselImages.map((img, idx) => (
                         <img 
                             key={idx}
