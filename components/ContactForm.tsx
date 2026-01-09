@@ -18,7 +18,7 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulating email send to coderzaplicativos@gmail.com
+    // Simulating email send to contato@coderzaplicativos.com.br
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitted(true);
@@ -129,9 +129,9 @@ const ContactForm: React.FC = () => {
           <>Enviar Mensagem <Send size={20} /></>
         )}
       </button>
-      
-      <p className="text-center text-xs text-gray-500">
-        Sua mensagem será enviada diretamente para <strong>coderzaplicativos@gmail.com</strong>
+
+      <p className="text-center text-xs text-gray-500 pt-2">
+        Sua mensagem será enviada diretamente para <span className="text-pink-500 font-bold">contato@coderzaplicativos.com.br</span>
       </p>
     </form>
   );

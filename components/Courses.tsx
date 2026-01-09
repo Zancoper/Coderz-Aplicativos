@@ -4,31 +4,31 @@ import { Star, Users, Clock } from 'lucide-react';
 
 const courses = [
   {
-    image: "https://picsum.photos/seed/coding1/600/400",
+    image: "https://images.unsplash.com/photo-1617040619263-41c5a9ca7521?q=80&w=2070&auto=format&fit=crop",
     category: "Full Stack",
-    title: "Desenvolvedor de Apps Master",
+    title: "Desenvolvedor de Apps com IA",
     rating: 4.9,
-    students: "1.2k",
-    duration: "120h",
-    price: "R$ 497,00"
+    students: "60",
+    duration: "10h",
+    price: "R$ 397,90"
   },
   {
-    image: "https://picsum.photos/seed/coding2/600/400",
-    category: "Mobile",
-    title: "Flutter do Zero ao Avançado",
-    rating: 4.8,
-    students: "850",
-    duration: "60h",
-    price: "R$ 297,00"
-  },
-  {
-    image: "https://picsum.photos/seed/coding3/600/400",
-    category: "UI Design",
-    title: "Design para Desenvolvedores",
+    image: "https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/comunidade-coderz-app-znoa2v/assets/d9k117g1ojmr/ChatGPT_Image_3_de_jan._de_2026%2C_18_08_27.png",
+    category: "Low-Code",
+    title: "Crie um App de Delivery no FlutterFlow",
     rating: 5.0,
-    students: "420",
-    duration: "40h",
-    price: "R$ 197,00"
+    students: "80",
+    duration: "20h",
+    price: "R$ 189,90"
+  },
+  {
+    image: "https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/comunidade-coderz-app-znoa2v/assets/rh5iigu4rq66/baixados_(1).png",
+    category: "Low-Code",
+    title: "Aprenda FlutterFlow",
+    rating: 4.8,
+    students: "1600",
+    duration: "15h",
+    price: "R$ 99,90"
   }
 ];
 
@@ -71,9 +71,14 @@ const Courses: React.FC = () => {
             
             <div className="flex items-center justify-between">
               <span className="text-2xl font-black text-white">{course.price}</span>
-              <button className="p-3 rounded-xl bg-purple-600/20 text-purple-400 hover:bg-purple-600 hover:text-white transition-all">
+              <a 
+                href="https://comunidade.coderzaplicativos.com.br"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-3 rounded-xl bg-purple-600/20 text-purple-400 font-bold hover:bg-purple-600 hover:text-white transition-all text-center"
+              >
                 Inscrever-se
-              </button>
+              </a>
             </div>
           </div>
         </div>

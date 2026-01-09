@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Smartphone, ChevronRight } from 'lucide-react';
+import { Smartphone, ChevronRight, Users, GraduationCap } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
           </h1>
           
           <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto lg:mx-0">
-            A Coderz Aplicativos é especialista em criar apps de alto impacto e formar os desenvolvedores do futuro através de treinamentos intensivos.
+            A Coderz Aplicativos é uma Empresa especialista em criar Apps e Sistemas Low-Code e No-Code de alto impacto e formar desenvolvedores através de treinamentos em nossa Comunidade.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
@@ -38,17 +38,26 @@ const Hero: React.FC = () => {
               href="#cursos" 
               className="w-full sm:w-auto px-8 py-4 glass text-white font-bold rounded-2xl hover:bg-white/10 transition-all flex items-center justify-center gap-2"
             >
-              Conhecer Cursos
+              Conhecer Nossos Cursos
             </a>
           </div>
 
-          <div className="mt-12 flex items-center justify-center lg:justify-start gap-8 opacity-50 grayscale hover:grayscale-0 transition-all">
-            <div className="text-sm font-bold text-gray-400">Trusted by:</div>
-            <div className="flex gap-6">
-              <span className="text-xl font-bold">TECH.</span>
-              <span className="text-xl font-bold">CORE.</span>
-              <span className="text-xl font-bold">CLOUD.</span>
-            </div>
+          <div className="mt-12">
+            <a 
+              href="https://comunidade.coderzaplicativos.com.br" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-pink-500/50 transition-all group"
+            >
+              <div className="w-10 h-10 rounded-xl bg-pink-500/20 flex items-center justify-center text-pink-500 group-hover:bg-pink-500 group-hover:text-white transition-all">
+                <Users size={20} />
+              </div>
+              <div className="text-left">
+                <p className="text-[10px] text-gray-500 uppercase font-black tracking-widest">Acesse agora</p>
+                <p className="text-sm font-bold text-white">comunidade.coderzaplicativos.com.br</p>
+              </div>
+              <ChevronRight size={16} className="text-gray-600 group-hover:text-white transition-colors" />
+            </a>
           </div>
         </div>
 
@@ -57,18 +66,18 @@ const Hero: React.FC = () => {
             {/* Mockup visual */}
             <div className="relative glass p-4 rounded-[40px] shadow-2xl border-white/20">
                 <img 
-                    src="https://picsum.photos/seed/app/800/1000" 
+                    src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1931&auto=format&fit=crop" 
                     alt="App Preview" 
-                    className="rounded-[30px] w-full h-auto object-cover"
+                    className="rounded-[30px] w-full h-auto object-cover aspect-[4/5]"
                 />
                 <div className="absolute -bottom-6 -left-6 glass p-6 rounded-3xl animate-bounce-slow">
                     <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white">
-                            <Smartphone size={20} />
+                        <div className="w-10 h-10 rounded-full bg-pink-500 flex items-center justify-center text-white">
+                            <GraduationCap size={20} />
                         </div>
                         <div>
-                            <p className="text-xs text-gray-400">Usuários Ativos</p>
-                            <p className="text-lg font-bold">+15.000</p>
+                            <p className="text-lg font-bold">Total de Alunos</p>
+                            <p className="text-lg font-bold">+1.700</p>
                         </div>
                     </div>
                 </div>

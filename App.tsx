@@ -80,7 +80,7 @@ const App: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500 uppercase tracking-wider font-bold">Email</p>
-                    <p className="text-lg">coderzaplicativos@gmail.com</p>
+                    <p className="text-lg">contato@coderzaplicativos.com.br</p>
                   </div>
                 </div>
                 

@@ -21,7 +21,7 @@ const services = [
   {
     icon: <Database className="text-green-500" size={32} />,
     title: "Backend & Integrações",
-    description: "Arquitetura de dados segura e integrações de API complexas para o seu negócio."
+    description: "Arquitetura de dados segura e integrações de API para o seu negócio."
   },
   {
     icon: <Cpu className="text-yellow-500" size={32} />,
