@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
                   <path d="M46 44L58 50L46 56V44Z" fill="white"/>
                 </svg>
               </div>
-              <span className="text-2xl font-black text-white">Coderz<span className="text-pink-500"> Aplicativos</span></span>
+              <span className="text-2xl font-black text-white">Coderz<span className="text-pink-500">Aplicativos</span></span>
             </div>
             <p className="text-gray-400 mb-8 leading-relaxed">
               Desenvolvendo o futuro digital através de aplicativos incríveis e educação de alta qualidade. Transformamos sua visão em realidade mobile.

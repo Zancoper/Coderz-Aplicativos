@@ -6,7 +6,7 @@ const courses = [
   {
     image: "https://images.unsplash.com/photo-1617040619263-41c5a9ca7521?q=80&w=2070&auto=format&fit=crop",
     category: "Full Stack",
-    title: "Desenvolvedor de Apps com IA",
+    title: "Desenvolvimento de Apps com IA",
     rating: 4.9,
     students: "60",
     duration: "10h",

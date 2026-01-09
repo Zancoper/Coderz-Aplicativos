@@ -1,8 +1,29 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Smartphone, ChevronRight, Users, GraduationCap } from 'lucide-react';
 
+const carouselImages = [
+  "https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/gestao-coderz-djrfru/assets/3vpe72mmi04j/Screenshot_20260109_161344.jpg",
+  "https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/gestao-coderz-djrfru/assets/ow4tmr7096jv/Screenshot_20260109_161334.jpg",
+  "https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/gestao-coderz-djrfru/assets/pkhvz6uz2jxl/Screenshot_20260109_161827.jpg",
+  "https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/gestao-coderz-djrfru/assets/fjummfhkkgh3/Screenshot_20260109_161406.jpg",
+  "https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/gestao-coderz-djrfru/assets/uq80373i6kzf/Screenshot_20260109_161751.jpg",
+  "https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/gestao-coderz-djrfru/assets/s3z1krjt9tb7/Screenshot_20260109_161836.jpg",
+  "https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/gestao-coderz-djrfru/assets/14h38vnteenm/Screenshot_20260109_161640_Chrome.jpg",
+  "https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/gestao-coderz-djrfru/assets/kdwxl0zqdr0s/Screenshot_20260109_161424.jpg",
+  "https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/gestao-coderz-djrfru/assets/te2wau9rbbu2/Screenshot_20260109_161657.jpg"
+];
+
 const Hero: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % carouselImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Decorative Orbs */}
@@ -16,7 +37,7 @@ const Hero: React.FC = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-pink-500"></span>
             </span>
-            Tech Development & Academy
+            Desenvolvimento & Cursos
           </div>
           
           <h1 className="text-5xl lg:text-7xl font-black text-white leading-tight mb-6">
@@ -24,7 +45,7 @@ const Hero: React.FC = () => {
           </h1>
           
           <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto lg:mx-0">
-            A Coderz Aplicativos é uma Empresa especialista em criar Apps e Sistemas Low-Code e No-Code de alto impacto e formar desenvolvedores através de treinamentos em nossa Comunidade.
+            A Coderz Aplicativoss é uma Empresa especialista em criar Apps e Sistemas Low-Code e No-Code de alto impacto e formar desenvolvedores através de treinamentos em nossa Comunidade.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
@@ -42,7 +63,7 @@ const Hero: React.FC = () => {
             </a>
           </div>
 
-          <div className="mt-12">
+          <div className="mt-12 flex flex-col sm:flex-row items-center gap-6 justify-center lg:justify-start">
             <a 
               href="https://comunidade.coderzaplicativos.com.br" 
               target="_blank" 
@@ -58,34 +79,49 @@ const Hero: React.FC = () => {
               </div>
               <ChevronRight size={16} className="text-gray-600 group-hover:text-white transition-colors" />
             </a>
+
+            {/* Info Card - Now moved here next to the access link */}
+            <div className="glass p-4 rounded-2xl animate-bounce-slow shadow-2xl border-white/10 flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-pink-500 flex items-center justify-center text-white shrink-0">
+                    <GraduationCap size={20} />
+                </div>
+                <div className="text-left">
+                    <p className="text-[10px] text-gray-400 uppercase font-black leading-none mb-1">Total de Alunos</p>
+                    <p className="text-lg font-bold text-white leading-none">+1.700</p>
+                </div>
+            </div>
           </div>
         </div>
 
-        <div className="flex-1 relative">
-          <div className="relative z-10 w-full max-w-[500px] mx-auto">
-            {/* Mockup visual */}
-            <div className="relative glass p-4 rounded-[40px] shadow-2xl border-white/20">
-                <img 
-                    src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1931&auto=format&fit=crop" 
-                    alt="App Preview" 
-                    className="rounded-[30px] w-full h-auto object-cover aspect-[4/5]"
-                />
-                <div className="absolute -bottom-6 -left-6 glass p-6 rounded-3xl animate-bounce-slow">
-                    <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-pink-500 flex items-center justify-center text-white">
-                            <GraduationCap size={20} />
-                        </div>
-                        <div>
-                            <p className="text-lg font-bold">Total de Alunos</p>
-                            <p className="text-lg font-bold">+1.700</p>
-                        </div>
+        <div className="flex-1 relative flex justify-center lg:justify-end">
+          <div className="relative z-10 w-full max-w-[340px]">
+            {/* Mockup visual with Vertical Carousel - Aspect ratio updated for modern phones */}
+            <div className="relative glass p-3 rounded-[50px] shadow-2xl border-white/20">
+                <div className="relative overflow-hidden rounded-[40px] aspect-[9/19.5] bg-[#0a0515]">
+                    {carouselImages.map((img, idx) => (
+                        <img 
+                            key={idx}
+                            src={img} 
+                            alt={`App Preview ${idx + 1}`} 
+                            className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out transform ${idx === currentIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-100'}`}
+                        />
+                    ))}
+                    
+                    {/* Indicators */}
+                    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
+                        {carouselImages.map((_, idx) => (
+                            <div 
+                                key={idx} 
+                                className={`h-1 rounded-full transition-all duration-300 ${idx === currentIndex ? 'w-5 bg-pink-500' : 'w-1 bg-white/20'}`}
+                            />
+                        ))}
                     </div>
                 </div>
             </div>
             
-            {/* Background geometric shapes */}
-            <div className="absolute -top-10 -right-10 w-32 h-32 bg-pink-500/20 rounded-full -z-10"></div>
-            <div className="absolute top-1/2 -left-10 w-20 h-20 bg-purple-500/20 rotate-45 -z-10"></div>
+            {/* Background decorative elements */}
+            <div className="absolute -top-10 -right-10 w-40 h-40 bg-pink-500/10 rounded-full -z-10 blur-2xl"></div>
+            <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-purple-500/10 rounded-full -z-10 blur-xl"></div>
           </div>
         </div>
       </div>
